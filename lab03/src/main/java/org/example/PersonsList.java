@@ -37,16 +37,16 @@ public class PersonsList {
     }
 
     public Person clone(Person person){
-        Person myPerson = person;
+        Person myPerson;
         int newId;
 
-        newId = myPerson.getId() +1;
-        myPerson.setId(newId);
+        newId = person.getId() +1;
+        myPerson = new Person(newId, person.getName(), person.getAge(), person.getOccupation());
 
         return myPerson;
     }
 
-    public void toString(Person person) throws IOException {
+    public void writeToPerson(Person person) throws IOException {
         String filepath = "src/main/java/org/example/file.txt";
 
         File file = new File(filepath);

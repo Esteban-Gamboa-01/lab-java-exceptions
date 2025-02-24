@@ -36,7 +36,7 @@ public class Person {
     }
 
     public void setAge(Integer age) throws RangeValues{
-        if(this.age<0){
+        if(age<0){
             throw new RangeValues("This value is less than 0.");
         }
         this.age = age;
